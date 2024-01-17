@@ -3,14 +3,14 @@ This funtion is similiar to R_TRIG and F_TRIG of Codesys and is used to detect a
 
 
 - [Edge Detection](#edge-detection)
-  - [Syntax](#syntax)
+  - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
     - [Rising Edge Detection](#rising-edge-detection)
     - [Falling Edge Detection](#falling-edge-detection)
   - [Lasal Class 2 Example](#lasal-class-2-example)
     - [ST Code](#st-code)
-    - [Necessary Variables](#necessary-variables)
+    - [Class View](#class-view)
 
-## Syntax
+## Syntax in Lasal Class 2
 * this function needs a locale ```^DINT``` Pointer in the Class
 
 ### Rising Edge Detection
@@ -93,5 +93,5 @@ END_FUNCTION
 
 
 
-### Necessary Variables
-![Alt text](img\image-1.png)
+### Class View
+![Alt text](img/image-1.png)

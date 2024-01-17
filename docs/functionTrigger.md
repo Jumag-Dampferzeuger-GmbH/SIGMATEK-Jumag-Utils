@@ -2,12 +2,12 @@
 Triggering a function at a specific time. If the time is reached the return value is true and the time stamp is stored in the locale pointer variable in Lasal Class 2
 
 - [Function Trigger](#function-trigger)
-  - [Syntax](#syntax)
+  - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
   - [Lasal Class 2 Example](#lasal-class-2-example)
     - [ST Code](#st-code)
-    - [Necessary Variables](#necessary-variables)
+    - [Class View](#class-view)
 
-## Syntax
+## Syntax in Lasal Class 2
 ```
 result : BOOL = functionTrigger(UDINT : currentTime, timeStamp : ^UDINT, targetTime : UDINT)
 ```
@@ -69,6 +69,6 @@ END_FUNCTION
 
 
 
-### Necessary Variables
+### Class View
 
-![Alt text](image.png)
+![Alt text](img/image.png)
