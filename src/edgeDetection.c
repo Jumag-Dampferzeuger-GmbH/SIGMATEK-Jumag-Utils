@@ -12,14 +12,14 @@ VAR_OUTPUT
 END_VAR;
 
 */
-extern "C" bool rTrig_DINT(long int inputSignal, long int *prevSignal, long int triggerVal)
+extern "C" bool rTrig_DINT(int inputSignal, int *prevSignal, int triggerVal)
 {
     if (inputSignal >= triggerVal && *prevSignal < triggerVal)
     {
         *prevSignal = inputSignal;
         return 1;
     }
-    else if(inputSignal >= triggerVal && *prevSignal >= triggerVal || inputSignal < triggerVal && *prevSignal >= triggerVal) 
+    else if((inputSignal >= triggerVal && *prevSignal >= triggerVal) || (inputSignal < triggerVal && *prevSignal >= triggerVal)) 
     {
         *prevSignal = inputSignal;
         return 0;
@@ -43,14 +43,14 @@ END_VAR;
 
 */
 
-extern "C" bool fTrig_DINT(long int inputSignal, long int *prevSignal, long int triggerVal)
+extern "C" bool fTrig_DINT(int inputSignal, int *prevSignal, int triggerVal)
 {
   if(inputSignal <= triggerVal && *prevSignal > triggerVal) 
   {
     *prevSignal = inputSignal;
     return 1;
   }
-  else if(inputSignal <= triggerVal && *prevSignal <= triggerVal || inputSignal > triggerVal && *prevSignal <= triggerVal) 
+  else if((inputSignal <= triggerVal && *prevSignal <= triggerVal) || (inputSignal > triggerVal && *prevSignal <= triggerVal)) 
   {
     *prevSignal = inputSignal;
     return 0; 

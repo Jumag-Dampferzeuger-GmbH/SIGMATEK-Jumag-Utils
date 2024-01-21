@@ -14,7 +14,7 @@ END_VAR;
 
 */
 
-extern "C" bool functionTrigger(unsigned long int uiCurrentTime, unsigned long int *uiTimeStamp, unsigned long int uiTargetTime)
+extern "C" bool functionTrigger(unsigned int uiCurrentTime, unsigned int *uiTimeStamp, unsigned int uiTargetTime)
 {
   if((uiCurrentTime - *uiTimeStamp) >= uiTargetTime) 
   {

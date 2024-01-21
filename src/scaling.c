@@ -14,11 +14,11 @@ VAR_OUTPUT
 END_VAR;
 
 */
-extern "C" long int map(long int input, 
-                        long int inLow, 
-                        long int inHigh,
-                        long int outLow,
-                        long int outHigh)
+extern "C" int map( int input, 
+                    int inLow, 
+                    int inHigh,
+                    int outLow,
+                    int outHigh)
 {
     return outLow + (input - inLow) * (outHigh - outLow) / (inHigh - inLow);
 }
