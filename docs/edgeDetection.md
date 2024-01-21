@@ -15,25 +15,25 @@ This funtion is similiar to R_TRIG and F_TRIG of Codesys and is used to detect a
 
 ### Rising Edge Detection
 ```
-result : BOOL = rTrig_DINT(DINT : inputSignal, ^DINT : prevSignal, DINT : triggerVal)
+Q : BOOL = rTrig_DINT(DINT : INPUT, ^DINT : PREV, DINT : TRIGGER)
 ```
 
 | Argument | Datatype | Meaning |
 | ------------- | ------------- | ------------- |
-| inputSignal  | DINT | Your 0/1 value or analog signal which should be triggered |
-| prevSignal  | ^DINT  | locale pointer variable for storing the old signal value  |
-| triggerVal  | DINT  | target trigger value |
+| INPUT  | DINT | Your 0/1 value or analog signal which should be triggered |
+| PREV  | ^DINT  | locale pointer variable for storing the old signal value  |
+| TRIGGER  | DINT  | target trigger value |
 
 ### Falling Edge Detection
 ```
-result : BOOL = fTrig_DINT(DINT : inputSignal, ^DINT : prevSignal, DINT : triggerVal)
+Q : BOOL = fTrig_DINT(DINT : INPUT, ^DINT : PREV, DINT : TRIGGER)
 ```
 
 | Argument | Datatype | Meaning |
 | ------------- | ------------- | ------------- |
-| inputSignal  | DINT | Your 0/1 value or analog signal which should be triggered |
-| prevSignal  | ^DINT  | locale pointer variable for storing the old signal value  |
-| triggerVal  | DINT  | target trigger value |
+| INPUT  | DINT | Your 0/1 value or analog signal which should be triggered |
+| PREV  | ^DINT  | locale pointer variable for storing the old signal value  |
+| TRIGGER  | DINT  | target trigger value |
 
 
 
@@ -44,10 +44,10 @@ result : BOOL = fTrig_DINT(DINT : inputSignal, ^DINT : prevSignal, DINT : trigge
 
 ```
 Function Global __cdecl rTrig_DINT
-VAR_INPUT 
-  inputSignal : DINT;
-  prevSignal : ^DINT;
-  triggerVal : DINT;
+VAR_INPUT
+  INPUT : DINT;
+  PREV : ^DINT;
+  TRIGGER : DINT;
 END_VAR
 VAR_OUTPUT
   result : BOOL;
@@ -55,9 +55,9 @@ END_VAR;
 
 Function Global __cdecl fTrig_DINT
 VAR_INPUT
-  inputSignal : DINT;
-  prevSignal : ^DINT;
-  triggerVal : DINT;
+  INPUT : DINT;
+  PREV : ^DINT;
+  TRIGGER : DINT;
 END_VAR
 VAR_OUTPUT
   result : BOOL;
@@ -71,26 +71,19 @@ FUNCTION VIRTUAL GLOBAL Class0::CyWork
 		state (EAX) 	: UDINT;
 	END_VAR
   
-  VAR
-  	oldSignal0 : ^DINT; 
-    oldSignal1 : ^DINT; 
-  END_VAR
+
   
   signal := signal.Read();
   
-  risingTriggered := rTrig_DINT(inputSignal:= signal, prevSignal:= oldSignal0, triggerVal:= targetValue);
+  risingTriggered := rTrig_DINT(INPUT:= signal, PREV:= #oldSignal0, TRIGGER:= targetValue);
 
-  fallingTriggered := fTrig_DINT(inputSignal:= signal, prevSignal:= oldSignal1, triggerVal:= targetValue);
- 
+  fallingTriggered := fTrig_DINT(INPUT:= signal, PREV:= #oldSignal1, TRIGGER:= targetValue);
+  
 	state := READY;
 
 END_FUNCTION
 
 ```
-
-
-
-
 
 
 ### Class View

@@ -3,12 +3,12 @@
 
 Function Global __cdecl rTrig_DINT
 VAR_INPUT
-  inputSignal : DINT;
-  prevSignal : ^DINT;
-  triggerVal : DINT;
+  INPUT : DINT;
+  PREV : ^DINT;
+  TRIGGER : DINT;
 END_VAR
 VAR_OUTPUT
-  result : BOOL;
+  Q : BOOL;
 END_VAR;
 
 */
@@ -33,12 +33,12 @@ extern "C" bool rTrig_DINT(int inputSignal, int *prevSignal, int triggerVal)
 
 Function Global __cdecl fTrig_DINT
 VAR_INPUT
-  inputSignal : DINT;
-  prevSignal : ^DINT;
-  triggerVal : DINT;
+  INPUT : DINT;
+  PREV : ^DINT;
+  TRIGGER : DINT;
 END_VAR
 VAR_OUTPUT
-  result : BOOL;
+  Q : BOOL;
 END_VAR;
 
 */

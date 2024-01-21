@@ -18,15 +18,15 @@ Depending of the input datatyoe you have to choose the right function.
 
 ### map
 ```
-result : DINT = map(DINT : input, DINT : inLow, DINT : inHigh, DINT : outLow, DINT : outHigh)
+Q : DINT = map(DINT : input, DINT : inLow, DINT : inHigh, DINT : outLow, DINT : outHigh)
 ```
 | Argument | Datatype | Meaning |
 | ------------- | ------------- | ------------- |
-| input  | DINT | Your input value |
-| inLow  | DINT  | Your input value range low  |
-| inHigh  | DINT  | Your input value range high  |
-| outLow  | DINT  | Your output value range low  |
-| outHigh  | DINT  | Your output value range high  |
+| INPUT  | DINT | Your input value |
+| I_LO  | DINT  | Your input value range low  |
+| I_HI  | DINT  | Your input value range high  |
+| O_LO  | DINT  | Your output value range low  |
+| O_HI  | DINT  | Your output value range high  |
 
 
 ### fMap
@@ -36,11 +36,11 @@ result : REAL = fMap(REAL : input, REAL : inLow, REAL : inHigh, REAL : outLow, R
 
 | Argument | Datatype | Meaning |
 | ------------- | ------------- | ------------- |
-| input  | REAL | Your input value |
-| inLow  | REAL  | Your input value range low  |
-| inHigh  | REAL  | Your input value range high  |
-| outLow  | REAL  | Your output value range low  |
-| outHigh  | REAL  | Your output value range high  |
+| INPUT  | REAL | Your input value |
+| I_LO  | REAL  | Your input value range low  |
+| I_HI  | REAL  | Your input value range high  |
+| O_LO  | REAL  | Your output value range low  |
+| O_HI  | REAL  | Your output value range high  |
 
 
 
@@ -53,26 +53,26 @@ result : REAL = fMap(REAL : input, REAL : inLow, REAL : inHigh, REAL : outLow, R
 ```
 Function Global __cdecl map
 VAR_INPUT
-  input : DINT;
-  inLow : DINT;
-  inHigh : DINT;
-  outLow : DINT;
-  outHigh : DINT;
+  INPUT : DINT;
+  I_LO : DINT;
+  I_HI : DINT;
+  O_LO : DINT;
+  O_HI : DINT;
 END_VAR
 VAR_OUTPUT
-  result : DINT;
+  Q : DINT;
 END_VAR;
 
 Function Global __cdecl fMap
 VAR_INPUT
-  input : REAL;
-  inLow : REAL;
-  inHigh : REAL;
-  outLow : REAL;
-  outHigh : REAL;
+  INPUT : REAL;
+  I_LO : REAL;
+  I_HI : REAL;
+  O_LO : REAL;
+  O_HI : REAL;
 END_VAR
 VAR_OUTPUT
-  result : REAL;
+  Q : REAL;
 END_VAR;
 
 FUNCTION VIRTUAL GLOBAL Class0::CyWork
@@ -85,14 +85,13 @@ FUNCTION VIRTUAL GLOBAL Class0::CyWork
   
   input := input.Read();
   
-  iScaled := map(input:= input, inLow:= -200, inHigh:=200, outLow:= 0, outHigh:= 100);
-  fScaled := fMap(input:= TO_REAL(input), inLow:= TO_REAL(-200), inHigh:= TO_REAL(200), outLow:= 0.0, outHigh:= 1000.0);
+  iScaled := map(INPUT:= input, i_LO:= -200, I_HI:=200, O_LO:= 0, O_HI:= 100);
+  fScaled := fMap(INPUT:= TO_REAL(input), I_LO:= TO_REAL(-200), I_HI:= TO_REAL(200), O_LO:= 0.0, O_HI:= 1000.0);
 
 
 	state := READY;
 
 END_FUNCTION
-
 ```
 
 

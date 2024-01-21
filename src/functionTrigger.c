@@ -4,12 +4,12 @@
 
 Function Global __cdecl functionTrigger
 VAR_INPUT 
-  currentTime : UDINT;
-  timeStamp : ^UDINT;
-  targetTime : UDINT;
+  CURR_TIME : UDINT;
+  TIME_STAMP : ^UDINT;
+  TAR_TIME : UDINT;
 END_VAR
 VAR_OUTPUT
-  result : BOOL;
+  Q : BOOL;
 END_VAR;
 
 */

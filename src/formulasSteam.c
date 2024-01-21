@@ -2,16 +2,16 @@
 
 /*DECLARATION IN LASAL CLASS 2
 
+
 Function Global __cdecl antoineFormT
 VAR_INPUT
-  pressure : REAL;
+  INPUT : REAL;
 END_VAR
 VAR_OUTPUT
-  result : REAL;
+  Q : REAL;
 END_VAR;
 
 */
-
 // Calculates the temperature of saturated steam in °C by using the Antoine equation 
 // Source: https://en.wikipedia.org/wiki/Antoine_equation
 // - pressure in bar 

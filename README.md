@@ -1,9 +1,7 @@
 # SIGMATEK-Jumag-Utils
 A collection of c-style functions for SIGMATEK Lasal Class 2. For using the functions of this library you have to move the .c files which you need in your ```Source/``` folder of  your project.
 
-![Alt text](docs/img/image-1.png)
-
-
+![Alt text](docs/img/image-2.png)
 
 # How to use C Files in Lasal Class 2
 

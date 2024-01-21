@@ -3,22 +3,22 @@
 
 Function Global __cdecl map
 VAR_INPUT
-  input : DINT;
-  inLow : DINT;
-  inHigh : DINT;
-  outLow : DINT;
-  outHigh : DINT;
+  INPUT : DINT;
+  I_LO : DINT;
+  I_HI : DINT;
+  O_LO : DINT;
+  O_HI : DINT;
 END_VAR
 VAR_OUTPUT
-  result : DINT;
+  Q : DINT;
 END_VAR;
 
 */
-extern "C" int map( int input, 
-                    int inLow, 
-                    int inHigh,
-                    int outLow,
-                    int outHigh)
+extern "C" long int map(long int input, 
+                        long int inLow, 
+                        long int inHigh,
+                        long int outLow,
+                        long int outHigh)
 {
     return outLow + (input - inLow) * (outHigh - outLow) / (inHigh - inLow);
 }
@@ -28,14 +28,14 @@ extern "C" int map( int input,
 
 Function Global __cdecl fMap
 VAR_INPUT
-  input : REAL;
-  inLow : REAL;
-  inHigh : REAL;
-  outLow : REAL;
-  outHigh : REAL;
+  INPUT : REAL;
+  I_LO : REAL;
+  I_HI : REAL;
+  O_LO : REAL;
+  O_HI : REAL;
 END_VAR
 VAR_OUTPUT
-  result : REAL;
+  Q : REAL;
 END_VAR;
 
 */
