@@ -4,7 +4,7 @@ If the time is reached the return value is true and the time stamp is stored in 
 
 - [Function Trigger](#function-trigger)
   - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
-  - [Lasal Class 2 Example](#lasal-class-2-example)
+    - [Lasal Class 2 Example](#lasal-class-2-example)
     - [ST Code](#st-code)
     - [Class View](#class-view)
 
@@ -20,7 +20,7 @@ Q : BOOL = functionTrigger(UDINT : CURR_TIME, TIME_STAMP : ^UDINT, TAR_TIME : UD
 | TIME_STAMP  | ^UDINT  | locale pointer variable for storing the time stamp  |
 | TAR_TIME  | UDINT  | the target time in ms  |
 
-## Lasal Class 2 Example
+### Lasal Class 2 Example
 * You can find a compialable example by clicking here: [Example](https://github.com/Jumag-Dampferzeuger-GmbH/SIGMATEK-Jumag-Utils-Examples/tree/main/functionTrigger)
 
 ### ST Code

@@ -110,7 +110,7 @@ extern "C" bool isFinite(float f)
 
 /* 
 
-Function Global __cdecl isGreater
+Function Global __cdecl isGreaterF
 VAR_INPUT
   CMP1 : REAL;
   CMP2 : REAL; 
@@ -121,14 +121,14 @@ END_VAR;
 
 */
 // true (1) if f1 is greater than f2.
-extern "C" bool isGreater(float f1, float f2)
+extern "C" bool isGreaterF(float f1, float f2)
 {
     return (f1 > f2) ? true : false;
 }
 
 /* 
 
-Function Global __cdecl isGreaterEqual
+Function Global __cdecl isGreaterEqualF
 VAR_INPUT
   CMP1 : REAL;
   CMP2 : REAL; 
@@ -139,15 +139,77 @@ END_VAR;
 
 */
 // true (1) if f1 is greater equal than f2.
-extern "C" bool isGreaterEqual(float f1, float f2)
+extern "C" bool isGreaterEqualF(float f1, float f2)
 {
     return (f1 >= f2) ? true : false;
 }
 
+/* 
 
+Function Global __cdecl isEqualF
+VAR_INPUT
+  CMP1 : REAL;
+  CMP2 : REAL; 
+END_VAR
+VAR_OUTPUT
+  Q : BOOL;
+END_VAR;
 
+*/
+// true (1) if f1 is equal to f2.
+extern "C" bool isEqualF(float f1, float f2)
+{
+    return (f1 == f2) ? true : false;
+}
+/* 
 
+Function Global __cdecl isEqualI
+VAR_INPUT
+  CMP1 : DINT;
+  CMP2 : DINT; 
+END_VAR
+VAR_OUTPUT
+  Q : BOOL;
+END_VAR;
 
+*/
+extern "C" bool isEqualI(int i1, int i2)
+{
+    return (i1 == i2) ? true : false;
+}
 
+/* 
 
+Function Global __cdecl isUnequalI
+VAR_INPUT
+  CMP1 : DINT;
+  CMP2 : DINT; 
+END_VAR
+VAR_OUTPUT
+  Q : BOOL;
+END_VAR;
 
+*/
+// returns true
+extern "C" bool isUnequalI(int i1, int i2)
+{
+    return (i1 != i2) ? true : false;
+}
+
+/* 
+
+Function Global __cdecl isUnequalF
+VAR_INPUT
+  CMP1 : REAL;
+  CMP2 : REAL; 
+END_VAR
+VAR_OUTPUT
+  Q : BOOL;
+END_VAR;
+
+*/
+// returns true
+extern "C" bool isUnequalF(float f1, float f2)
+{
+    return (f1 != f2) ? true : false;
+}

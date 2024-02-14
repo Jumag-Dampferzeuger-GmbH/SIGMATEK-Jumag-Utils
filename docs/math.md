@@ -3,7 +3,7 @@ The math.c file collects several mathematical functions
 
 
 - [Math functions](#math-functions)
-  - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
+    - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
   - [Min / Max Functions](#min--max-functions)
     - [fMin](#fmin)
     - [aMin](#amin)
@@ -11,7 +11,7 @@ The math.c file collects several mathematical functions
     - [ST Code](#st-code)
     - [Class View](#class-view)
 
-## Syntax in Lasal Class 2
+### Syntax in Lasal Class 2
 
 ## Min / Max Functions
 Functions for calculating the highest or lowest value of multiple input variables

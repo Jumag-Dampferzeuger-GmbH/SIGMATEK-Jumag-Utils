@@ -6,7 +6,7 @@ This funtion is similiar to R_TRIG and F_TRIG of Codesys and is used to detect a
   - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
     - [Rising Edge Detection](#rising-edge-detection)
     - [Falling Edge Detection](#falling-edge-detection)
-  - [Lasal Class 2 Example](#lasal-class-2-example)
+    - [Lasal Class 2 Example](#lasal-class-2-example)
     - [ST Code](#st-code)
     - [Class View](#class-view)
 
@@ -37,7 +37,7 @@ Q : BOOL = fTrig_DINT(DINT : INPUT, ^DINT : PREV, DINT : TRIGGER)
 
 
 
-## Lasal Class 2 Example
+### Lasal Class 2 Example
 * You can find a compialable example by clicking here: [Example](https://github.com/Jumag-Dampferzeuger-GmbH/SIGMATEK-Jumag-Utils-Examples/tree/main/edgeDetection)
 
 ### ST Code

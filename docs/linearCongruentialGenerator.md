@@ -6,12 +6,12 @@ For more information about the linear congruential generator, please visit: [Lin
 Please consider that each linear generator is not a cryptographically secure pseudo-random number generator. For more information about cryptographically secure pseudo-random number generator, please visit: [Cryptographically secure pseudo-random number generator](https://en.wikipedia.org/wiki/Cryptographically_secure_pseudo-random_number_generator)
 
 - [Linear Congruential Generator](#linear-congruential-generator)
-  - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
+    - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
   - [Lasal Class 2 Example](#lasal-class-2-example)
     - [ST Code](#st-code)
     - [Class View](#class-view)
 
-## Syntax in Lasal Class 2
+### Syntax in Lasal Class 2
 
 ```
 Q : DINT = linCongGen(DINT : INPUT, DINT : FACTOR, DINT : INCREMENT, DINT : MODULO)

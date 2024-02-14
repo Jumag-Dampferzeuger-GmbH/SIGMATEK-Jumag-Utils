@@ -10,7 +10,7 @@ Depending of the input datatyoe you have to choose the right function.
   - [Syntax in Lasal Class 2](#syntax-in-lasal-class-2)
     - [map](#map)
     - [fMap](#fmap)
-  - [Lasal Class 2 Example](#lasal-class-2-example)
+    - [Lasal Class 2 Example](#lasal-class-2-example)
     - [ST Code](#st-code)
     - [Class View](#class-view)
 
@@ -45,7 +45,7 @@ result : REAL = fMap(REAL : input, REAL : inLow, REAL : inHigh, REAL : outLow, R
 
 
 
-## Lasal Class 2 Example
+### Lasal Class 2 Example
 * You can find a compialable example by clicking here: [Example](https://github.com/Jumag-Dampferzeuger-GmbH/SIGMATEK-Jumag-Utils-Examples/tree/main/scaling)
 
 ### ST Code
