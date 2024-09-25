@@ -14,7 +14,7 @@ The ton and tof functions are used for delaying signals.
 ### DelayTof
 * If the input signal is falling from true to false the output signal will be true for the time of PT. The output is immediately true if the input signal is true.
 ```
-Q : BOOL = DelayTof(IN : BOOL, PT : DINT , ET: ^UDINT , CLOCK : UDINT)
+Q : BOOL = DelayTof(IN : BOOL, PT : DINT , ET: ^UDINT , TIMESTAMP: ^UDINT, CLOCK : UDINT)
 ```
 
 | Argument | Datatype | Meaning |
@@ -22,6 +22,7 @@ Q : BOOL = DelayTof(IN : BOOL, PT : DINT , ET: ^UDINT , CLOCK : UDINT)
 | IN  | BOOL | Input signal |
 | PT  | DINT | Time in ms |
 | ET  | ^UDINT | Pointer to the elapsed time |
+| TIMESTAMP  | ^UDINT | Pointer to the timestamp for saving the  ```ops.tAbsolute```  time|
 | CLOCK  | UDINT | Clock signal ```ops.tAbsolute``` |
 | Q  | BOOL | Output signal |
 
@@ -30,7 +31,7 @@ Q : BOOL = DelayTof(IN : BOOL, PT : DINT , ET: ^UDINT , CLOCK : UDINT)
 
 
 ```
-Q : BOOL = DelayTon(IN : BOOL, PT : DINT , ET: ^UDINT , CLOCK : UDINT)
+Q : BOOL = DelayTon(IN : BOOL, PT : DINT , ET: ^UDINT , TIMESTAMP: ^UDINT, CLOCK : UDINT)
 ```
 
 | Argument | Datatype | Meaning |
@@ -38,6 +39,7 @@ Q : BOOL = DelayTon(IN : BOOL, PT : DINT , ET: ^UDINT , CLOCK : UDINT)
 | IN  | BOOL | Input signal |
 | PT  | DINT | Time in ms |
 | ET  | ^UDINT | Pointer to the elapsed time |
+| TIMESTAMP  | ^UDINT | Pointer to the timestamp for saving the  ```ops.tAbsolute```  time|
 | CLOCK  | UDINT | Clock signal ```ops.tAbsolute``` |
 | Q  | BOOL | Output signal |
 
@@ -53,8 +55,9 @@ Q : BOOL = DelayTon(IN : BOOL, PT : DINT , ET: ^UDINT , CLOCK : UDINT)
 Function Global __cdecl DelayTon
 VAR_INPUT
   IN : BOOL;
-  PT : DINT; 
-  ET : ^UDINT; 
+  PT : DINT;
+  ET : ^UDINT;
+  TIMESTAMP : ^UDINT;
   CLOCK : UDINT;
 END_VAR
 VAR_OUTPUT
@@ -81,7 +84,7 @@ FUNCTION VIRTUAL GLOBAL ton::CyWork
   end_if;
 
   
-  ClassSvr := DelayTon(IN:=x , PT:= targetTime, ET:= #elapsedTime, CLOCK:= ops.tAbsolute);
+  ClassSvr := DelayTon(IN:=x, PT:=targetTime, ET:=#elapsedTime, TIMESTAMP:=#timeStamp, CLOCK:=ops.tAbsolute);
 
 	state := READY;
 
@@ -91,4 +94,4 @@ END_FUNCTION
 
 
 ### Class View
-![alt text](img/image-11.png)
+![alt text](img/image-12.png)
