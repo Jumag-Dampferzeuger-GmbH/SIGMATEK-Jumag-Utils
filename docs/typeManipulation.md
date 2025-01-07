@@ -15,7 +15,7 @@ With this function you can manipulate your data types.
 
 
 ### Lasal Class 2 Example
-* You can find a compialable example by clicking here: [Example](https://github.com/Jumag-Dampferzeuger-GmbH/SIGMATEK-Jumag-Utils-Examples/tree/main)
+* You can find a compialable example by clicking here: [Example](https://github.com/Jumag-Dampferzeuger-GmbH/SIGMATEK-Jumag-Utils-Examples/tree/main/typeManipulation)
 
 ### ST Code
 

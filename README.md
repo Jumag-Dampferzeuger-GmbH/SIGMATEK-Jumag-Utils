@@ -23,3 +23,13 @@ A collection of c-style functions for SIGMATEK Lasal Class 2. For using the func
 * if you commit the suggestion with the enter button the auto completion is creating the function with all necessary parameters ![Alt text](docs/img/image-6.png)
 * if you hover over the function you will see the expected datatypes of the parameters
 
+# Help Documents for the Functions of this library
+* [Delay](docs/delay.md)
+* [Two Point Controller](docs/twoPointController.md)
+* [Scaling](docs/scaling.md)
+* [Edge Detection](docs/edgeDetection.md)
+* [Function Trigger](docs/functionTrigger.md)
+* [Pseudo Randomizer](docs/linearCongruentialGenerator.md)
+* [Datatype manipulation](docs/typeManipulation.md)
+* [Math Functions](docs/math.md)
+* [Steam formula: Antoine equation](docs/antoineFormular.md)
