@@ -93,7 +93,7 @@ extern "C" float aMaxF(const float *f , const int size)
 
 /* 
 
-Function Global __cdecl aMinF
+Function Global __cdecl aMin
 VAR_INPUT
   pINPUT : ^DINT;
   SIZE : DINT; 
@@ -107,6 +107,7 @@ END_VAR;
 // calc the min value of an array of DINTs
 extern "C" long int aMin(const long int *input , const long int size)
 {
+  
     long int minValue = input[0];
 
     for (int i = 1; i < size; i++)
