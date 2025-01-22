@@ -14,11 +14,11 @@ VAR_OUTPUT
 END_VAR;
 
 */
-extern "C" long int map(long int input, 
-                        long int inLow, 
-                        long int inHigh,
-                        long int outLow,
-                        long int outHigh)
+extern "C" long int map(const long int input, 
+                        const long int inLow, 
+                        const long int inHigh,
+                        const long int outLow,
+                        const long int outHigh)
 {
     return outLow + (input - inLow) * (outHigh - outLow) / (inHigh - inLow);
 }
@@ -39,11 +39,11 @@ VAR_OUTPUT
 END_VAR;
 
 */
-extern "C" float fMap(float input, 
-                      float inLow, 
-                      float inHigh,
-                      float outLow,
-                      float outHigh)
+extern "C" float fMap(const float input, 
+                      const float inLow, 
+                      const float inHigh,
+                      const float outLow,
+                      const float outHigh)
 {
     return outLow + (input - inLow) * (outHigh - outLow) / (inHigh - inLow);
 }
