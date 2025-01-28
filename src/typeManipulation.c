@@ -56,7 +56,26 @@ END_VAR;
 
 */
 // Pack 4 bytes into a Sigmatek specific ip address scheme
-extern "C" void packSigmatekIp(unsigned char byte4, unsigned char byte3, unsigned char byte2, unsigned char byte1, unsigned int *iOutputIp)
+extern "C" void packSigmatekIp(const unsigned char byte4, const unsigned char byte3, const unsigned char byte2, const unsigned char byte1, unsigned int *iOutputIp)
 {
     *iOutputIp = ((unsigned int)byte1 << 24) | ((unsigned int)byte2 << 16) | ((unsigned int)byte3 << 8) | byte4;
 }
+
+/* 
+
+Function Global __cdecl mergeUINT
+VAR_INPUT
+  MSB : UINT;
+  LSB : UINT; 
+END_VAR
+VAR_OUTPUT
+  Q : UDINT;
+END_VAR;
+
+*/
+// merge two UINT Variables to one UDINT
+extern "C" unsigned long int mergeUINT(const unsigned int msb, const unsigned int lsb)
+{
+    return (((unsigned long int)msb << 16) | (unsigned long int)lsb);
+}
+
