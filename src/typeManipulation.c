@@ -40,6 +40,30 @@ extern "C" void splitDINT(const long int iInput, unsigned char *byte1, unsigned 
     *byte4 = (unsigned char)(iInput & 0xFF);
 }
 
+/* 
+
+Function Global __cdecl splitUDINT
+VAR_INPUT
+  IN : DINT;
+  MSB : ^BSINT;
+  MID_MSB : ^BSINT;
+  MID_LSB : ^BSINT;
+  LSB : ^BSINT; 
+END_VAR
+VAR_OUTPUT
+  Q : UINT;
+END_VAR;
+
+*/
+// split one UDINT (32bit) to  BSINTs (8bit)
+extern "C" void splitUDINT(const unsigned long int iInput, unsigned char *byte1, unsigned char *byte2, unsigned char *byte3, unsigned char *byte4)
+{
+    *byte1 = (unsigned char)((iInput >> 24) & 0xFF);
+    *byte2 = (unsigned char)((iInput >> 16) & 0xFF);
+    *byte3 = (unsigned char)((iInput >> 8) & 0xFF);
+    *byte4 = (unsigned char)(iInput & 0xFF);
+}
+
 
 /* 
 
