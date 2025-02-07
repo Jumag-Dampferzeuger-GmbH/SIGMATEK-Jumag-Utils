@@ -26,6 +26,8 @@ VAR_INPUT
   MID_LSB : ^BSINT;
   LSB : ^BSINT; 
 END_VAR
+VAR_OUTPUT
+END_VAR;
 
 */
 // split one DINT (32bit) to  BSINTs (8bit)
@@ -47,6 +49,8 @@ VAR_INPUT
   MID_LSB : ^BSINT;
   LSB : ^BSINT; 
 END_VAR
+VAR_OUTPUT
+END_VAR;
 
 */
 // split one UDINT (32bit) to  BSINTs (8bit)
