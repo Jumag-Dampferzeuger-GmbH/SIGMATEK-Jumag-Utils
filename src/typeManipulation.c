@@ -26,9 +26,6 @@ VAR_INPUT
   MID_LSB : ^BSINT;
   LSB : ^BSINT; 
 END_VAR
-VAR_OUTPUT
-  Q : UINT;
-END_VAR;
 
 */
 // split one DINT (32bit) to  BSINTs (8bit)
@@ -44,15 +41,12 @@ extern "C" void splitDINT(const long int iInput, unsigned char *byte1, unsigned 
 
 Function Global __cdecl splitUDINT
 VAR_INPUT
-  IN : DINT;
+  IN : UDINT;
   MSB : ^BSINT;
   MID_MSB : ^BSINT;
   MID_LSB : ^BSINT;
   LSB : ^BSINT; 
 END_VAR
-VAR_OUTPUT
-  Q : UINT;
-END_VAR;
 
 */
 // split one UDINT (32bit) to  BSINTs (8bit)
