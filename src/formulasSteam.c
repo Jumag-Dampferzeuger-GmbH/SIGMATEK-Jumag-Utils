@@ -6,6 +6,7 @@
 Function Global __cdecl antoineFormT
 VAR_INPUT
   INPUT : REAL;
+  OPTION : BOOL;
 END_VAR
 VAR_OUTPUT
   Q : REAL;
@@ -14,12 +15,18 @@ END_VAR;
 */
 // Calculates the temperature of saturated steam in °C by using the Antoine equation
 // Source: https://en.wikipedia.org/wiki/Antoine_equation
+// bool IsOverpressure = true means that the pressure is given in barÜ
 // - pressure in bar
 // - accurate up to 374°C
-extern "C" float antoineFormT(float fPressure)
+extern "C" float antoineFormT(float fPressure, bool IsOverpressure)
 {
-
   float fMmHg = fPressure * 750.061561303F;
+  const float ATM = 1.01325F;
+  
+  if (IsOverpressure)
+    fMmHg = (fPressure + ATM) * 750.061561303F;
+
+  
 
   if (fMmHg < 0.0F)
     return 0.0F;

@@ -14,12 +14,13 @@ For more information about the antoine formular click [here](https://en.wikipedi
 
 ### Rising Edge Detection
 ```
-Q : REAL = antoineFormT(INPUT : REAL)
+Q : REAL = antoineFormT(INPUT : REAL, OPTION : BOOL)
 ```
 
 | Argument | Datatype | Meaning |
 | ------------- | ------------- | ------------- |
 | INPUT  | REAL | pressure in bar |
+| OPTION  | BOOL | if true, pressure is given in barU |
 
 
 
@@ -32,6 +33,7 @@ Q : REAL = antoineFormT(INPUT : REAL)
 Function Global __cdecl antoineFormT
 VAR_INPUT
   INPUT : REAL;
+  OPTION : BOOL;
 END_VAR
 VAR_OUTPUT
   Q : REAL;
@@ -47,7 +49,7 @@ FUNCTION VIRTUAL GLOBAL antoineFormular::CyWork
   
   pressure := pressure.Read();
   
-  antoineTemperature := antoineFormT(INPUT:= to_real(pressure) );
+  antoineTemperature := antoineFormT(INPUT:= to_real(pressure),OPTION:= TRUE  );
 
 	state := READY;
 
