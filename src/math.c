@@ -173,10 +173,20 @@ extern "C" bool isGreaterEqual(const float f1, const float f2)
     return (f1 >= f2) ? true : false;
 }
 
+/* 
 
+Function Global __cdecl trunc_n
+VAR_INPUT
+  value : REAL;
+  decimals : REAL; 
+END_VAR
+VAR_OUTPUT
+  Q : REAL;
+END_VAR;
 
-
-
-
-
-
+*/
+// returns float
+extern "C" float trunc_n(float f1, float f2)
+{
+    return ((f1*(f2*100)) / f2*100);
+}
